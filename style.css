@@ -1,0 +1,108 @@
+/* Global Styles */
+body {
+    font-family: 'Helvetica', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f8ff;
+    background-image: radial-gradient(circle at 20% 20%, #e0f7fa, #f0f8ff);
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.03);
+}
+
+h1 {
+    color: #333;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+/* Button Styles */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button#forgiveBtn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button#forgiveBtn:hover {
+    background-color: #45a049;
+    box-shadow: 0 5px 15px rgba(0, 128, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+button#dontForgiveBtn {
+    background-color: #f44336;
+    color: white;
+    position: relative;
+}
+
+button#dontForgiveBtn:hover {
+    background-color: #e53935;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+button#dontForgiveBtn:active {
+    transform: translateY(2px);
+}
+
+/* Message and Image Style */
+#message {
+    font-size: 1.3rem;
+    color: #4CAF50;
+    margin-top: 20px;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+#forgiveImage {
+    width: 200px;
+    height: auto;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Hidden initially */
+.hidden {
+    display: none;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
